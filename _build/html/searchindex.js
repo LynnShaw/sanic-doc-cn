@@ -1,0 +1,1 @@
+Search.setIndex({docnames:["index"],envversion:51,filenames:["index.rst"],objects:{},objnames:{},objtypes:{},terms:{},titles:["Welcome to sanic&#8217;s documentation!"],titleterms:{"and ":0,"documentation!":0,"indices ":0,"s ":0,"sanic'":0,"to ":0,"welcome ":0,tabl:0}})
