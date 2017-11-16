@@ -1,19 +1,38 @@
-.. sanic documentation master file, created by
-   sphinx-quickstart on Tue Nov  7 04:28:19 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. include:: sanic/index.rst
 
-Welcome to sanic's documentation!
-=================================
+Guides
+======
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+
+   sanic/getting_started
+   sanic/routing
+   sanic/request_data
+   sanic/response
+   sanic/static_files
+   sanic/exceptions
+   sanic/middleware
+   sanic/blueprints
+   sanic/config
+   sanic/cookies
+   sanic/decorators
+   sanic/streaming
+   sanic/class_based_views
+   sanic/custom_protocol
+   sanic/ssl
+   sanic/logging
+   sanic/testing
+   sanic/deploying
+   sanic/extensions
+   sanic/contributing
+   sanic/api_reference
 
 
+Module Documentation
+====================
 
-Indices and tables
-==================
+.. toctree::
 
 * :ref:`genindex`
 * :ref:`modindex`
