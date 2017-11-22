@@ -1,17 +1,19 @@
 Sanic
 =====
 
-|Join the chat at https://gitter.im/sanic-python/Lobby| |Build Status| |PyPI| |PyPI version|
+Sanic 是一个和 Flask 很像的Python 3.5+ 的 web 服务器，特点是速度很快。它基于 magicstack 团队里那些了不起的人所做的工作，灵感来源于 `这篇文章 <https://magic.io/blog/uvloop-blazing-fast-python-networking/>`_。
 
-Sanic is a Flask-like Python 3.5+ web server that's written to go fast.  It's based on the work done by the amazing folks at magicstack, and was inspired by `this article <https://magic.io/blog/uvloop-blazing-fast-python-networking/>`_.
+除了和 Flask 很像以外，Sanic 支持异步请求处理。这意味着你可以使用 Python 3.5 中的新语法 async/await ，编写非阻塞的快速的代码。
 
-On top of being Flask-like, Sanic supports async request handlers.  This means you can use the new shiny async/await syntax from Python 3.5, making your code non-blocking and speedy.
+Sanic 在 `GitHub <https://github.com/channelcat/sanic/>`_ 上开发。欢迎大家参与！
 
-Sanic is developed `on GitHub <https://github.com/channelcat/sanic/>`_. Contributions are welcome!
+文档
+-------------
 
-If you have a project that utilizes Sanic make sure to comment on the `issue <https://github.com/channelcat/sanic/issues/396>`_ that we use to track those projects!
+`英文文档 Readthedocs <http://sanic.readthedocs.io/>`_.
+`中文文档 Readthedocs <http://http://sanic-doc-cn.readthedocs.io/>`_.
 
-Hello World Example
+Hello World 例子
 -------------------
 
 .. code:: python
@@ -28,53 +30,34 @@ Hello World Example
     if __name__ == "__main__":
         app.run(host="0.0.0.0", port=8000)
 
-Installation
+安装
 ------------
 
 -  ``pip install sanic``
 
-To install sanic without uvloop or json using bash, you can provide either or both of these environmental variables
-using any truthy string like `'y', 'yes', 't', 'true', 'on', '1'` and setting the NO_X to true will stop that features
-installation.
+使用 bash 可以安装不包含 uvloop 或 json 的 sanic，你可以为他们的环境变量提供类似 `'y', 'yes', 't', 'true', 'on', '1'` 这种表示“真”的字符串并设置 NO_X 为真，就会停止安装相关特性。
 
 - ``SANIC_NO_UVLOOP=true SANIC_NO_UJSON=true pip install sanic``
 
 
-Documentation
--------------
-
-`Documentation on Readthedocs <http://sanic.readthedocs.io/>`_.
-
-.. |Join the chat at https://gitter.im/sanic-python/Lobby| image:: https://badges.gitter.im/sanic-python/Lobby.svg
-   :target: https://gitter.im/sanic-python/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-.. |Build Status| image:: https://travis-ci.org/channelcat/sanic.svg?branch=master
-   :target: https://travis-ci.org/channelcat/sanic
-.. |Documentation| image:: https://readthedocs.org/projects/sanic/badge/?version=latest
-   :target: http://sanic.readthedocs.io/en/latest/?badge=latest
-.. |PyPI| image:: https://img.shields.io/pypi/v/sanic.svg
-   :target: https://pypi.python.org/pypi/sanic/
-.. |PyPI version| image:: https://img.shields.io/pypi/pyversions/sanic.svg
-   :target: https://pypi.python.org/pypi/sanic/
-   
-
-Examples
+例子
 --------
-`Non-Core examples <https://github.com/channelcat/sanic/wiki/Examples/>`_. Examples of plugins and Sanic that are outside the scope of Sanic core.
+`非核心例子 <https://github.com/channelcat/sanic/wiki/Examples/>`_. Sanic 核心功能以外以及插件的例子。
 
-`Extensions <https://github.com/channelcat/sanic/wiki/Extensions/>`_. Sanic extensions created by the community.
+`扩展 <https://github.com/channelcat/sanic/wiki/Extensions/>`_. 社区开发的 Sanic 扩展。
 
-`Projects <https://github.com/channelcat/sanic/wiki/Projects/>`_. Sanic in production use.
+`项目 <https://github.com/channelcat/sanic/wiki/Projects/>`_. Sanic 在项目中使用。
 
 
 TODO
 ----
  * http2
 
-Limitations
+限制
 -----------
-* No wheels for uvloop and httptools on Windows :(
+* uvloop 和 httptools 没有 Windows 版本，也没有可替代的轮子 :(
 
-Final Thoughts
+最终目标
 --------------
 
 ::
