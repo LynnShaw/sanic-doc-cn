@@ -6,7 +6,7 @@ Guides
 .. toctree::
    :maxdepth: 2
 
-   sanic/getting_started
+   sanic/getting_started.md
    sanic/routing
    sanic/request_data
    sanic/response
