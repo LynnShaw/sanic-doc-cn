@@ -17,11 +17,20 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
+import os
+import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+# Add support for Markdown documentation using Recommonmark
+from recommonmark.parser import CommonMarkParser
 
+# Add support for auto-doc
+from recommonmark.transform import AutoStructify
+
+root_directory = os.path.dirname(os.getcwd())
+sys.path.insert(0, root_directory)
+
+import sanic
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -31,7 +40,7 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = ['sphinx.ext.autodoc', 'sphinxcontrib.asyncio']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
